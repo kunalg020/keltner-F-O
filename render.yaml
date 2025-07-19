@@ -1,0 +1,8 @@
+services:
+  - type: cron
+    name: nifty-fno-screener
+    env: python
+    schedule: '*/15 3-10 * * 1-5'
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python screener.py"
