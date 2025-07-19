@@ -129,8 +129,7 @@ def run_screener():
         if meets_criteria(symbol):
             matched.append(symbol)
     if matched:
-        msg = "🔔 *Screener Alerts (Nifty 50 + F&O):*
-" + "\n".join(matched)
+        msg = "🔔 *Screener Alerts (Nifty 50 + F&O):*\\n" + "\\n".join(matched)
         send_telegram_alert(msg)
     else:
         print("No matches today.")
